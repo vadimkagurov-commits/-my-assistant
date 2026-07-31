@@ -308,7 +308,7 @@
 </div>
 
 <div id="composer">
-  <button id="loadBtn" class="mono" onclick="loadModel()" style="display:none;"></button>
+  <button id="loadBtn" class="mono" style="display:none;"></button>
 </div>
 
 <script type="module">
@@ -364,6 +364,7 @@ function showLoadButton(){
   loadBtn.style.display = 'block';
   loadBtn.textContent = 'Загрузить модель (≈2 ГБ)';
   composer.querySelectorAll('#input, #send').forEach(e => e && e.remove());
+  loadBtn.addEventListener('click', loadModel);
 }
 
 function buildComposer(){
